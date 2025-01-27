@@ -10,8 +10,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #001f3f; /* Navy Blue */
-      color: white; /* White text for contrast */
+      background-color: #f8f9fa; /* Light background */
+      color: #333; /* Dark text for readability */
     }
 
     h1, h2, h3 {
@@ -26,7 +26,7 @@
     }
 
     header {
-      background-color: #004080;
+      background-color: navy;
       color: white;
       padding: 20px 0;
       text-align: center;
@@ -41,31 +41,49 @@
       font-size: 1.2rem;
     }
 
+    /* Section Styles */
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    section:nth-child(odd) {
+      background-color: white;
+      color: navy;
+    }
+
+    section:nth-child(even) {
+      background-color: #001f3f;
+      color: white;
+    }
+
     /* Table Styles */
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
-      background: #003366; /* Darker blue for the tables */
+      background: #f8f9fa; /* Light table background */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       animation: fadeIn 1.5s;
-      color: white;
+      color: #333;
     }
 
     table th, table td {
       padding: 12px;
       text-align: left;
-      border-bottom: 1px solid #004080; /* Slightly lighter blue for borders */
+      border-bottom: 1px solid #ddd;
     }
 
     table th {
-      background: #00264d; /* Dark navy for headers */
+      background: navy;
       color: white;
     }
 
     .btn {
       display: inline-block;
-      background-color: #0066cc; /* Bright blue button */
+      background-color: navy;
       color: white;
       padding: 6px 12px;
       text-decoration: none;
@@ -74,13 +92,13 @@
     }
 
     .btn:hover {
-      background-color: #0055a4; /* Slightly darker on hover */
+      background-color: #004080;
     }
 
     footer {
       text-align: center;
       padding: 10px;
-      background-color: #00264d; /* Matches header and table header color */
+      background-color: navy;
       color: white;
       margin-top: 20px;
     }
@@ -114,6 +132,7 @@
   </header>
 
   <div class="container">
+    <!-- About Section -->
     <section>
       <h2>About Me</h2>
       <p>
@@ -122,6 +141,7 @@
       </p>
     </section>
 
+    <!-- Education Section -->
     <section>
       <h2>Education</h2>
       <table>
@@ -144,6 +164,38 @@
       </table>
     </section>
 
+    <!-- Projects and Workshops Section -->
+    <section>
+      <h2>Projects and Workshops</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Project/Workshop</th>
+            <th>Details</th>
+            <th>Certificate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>KISAAN Agricultural Convention</td>
+            <td>Projects on Rhizobium Isolation and Active Carbon Estimation</td>
+            <td><a href="certificates/kisaan_certificate.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>HPLC, LCMS, GCMS Workshop</td>
+            <td>Training in advanced instrumentation</td>
+            <td><a href="certificates/hplc_workshop.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>Catalase Breaking The Bad</td>
+            <td>Understanding enzyme catalysis</td>
+            <td><a href="certificates/catalase_workshop.pdf" class="btn" download>Download</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Internships Section -->
     <section>
       <h2>Internships</h2>
       <table>
@@ -170,30 +222,13 @@
       </table>
     </section>
 
+    <!-- CV Download Section -->
     <section>
-      <h2>Certificates</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Certificate Name</th>
-            <th>Download</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>HPLC, LCMS, GCMS Workshop Certificate</td>
-            <td><a href="certificate1.pdf" class="btn" download>Download</a></td>
-          </tr>
-          <tr>
-            <td>Catalase Breaking The Bad Workshop Certificate</td>
-            <td><a href="certificate2.pdf" class="btn" download>Download</a></td>
-          </tr>
-          <tr>
-            <td>Scientific Writing Course Certificate</td>
-            <td><a href="certificate3.pdf" class="btn" download>Download</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Download My CV</h2>
+      <p>
+        You can download my complete CV by clicking the button below:
+      </p>
+      <a href="certificates/Aarohi_Gaikwad_CV.pdf" class="btn" download>Download CV</a>
     </section>
   </div>
 
