@@ -10,8 +10,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
-      color: #333;
+      background-color: #001f3f; /* Navy Blue */
+      color: white; /* White text for contrast */
     }
 
     h1, h2, h3 {
@@ -26,7 +26,7 @@
     }
 
     header {
-      background-color: #2c3e50;
+      background-color: #004080;
       color: white;
       padding: 20px 0;
       text-align: center;
@@ -46,43 +46,41 @@
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
-      background: white;
+      background: #003366; /* Darker blue for the tables */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       animation: fadeIn 1.5s;
+      color: white;
     }
 
     table th, table td {
       padding: 12px;
       text-align: left;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #004080; /* Slightly lighter blue for borders */
     }
 
     table th {
-      background: #2c3e50;
+      background: #00264d; /* Dark navy for headers */
       color: white;
     }
 
-    /* Button Styles */
     .btn {
       display: inline-block;
-      background-color: #3498db;
+      background-color: #0066cc; /* Bright blue button */
       color: white;
-      padding: 10px 20px;
+      padding: 6px 12px;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      margin: 10px 0;
-      animation: popUp 1s ease-out;
     }
 
     .btn:hover {
-      background-color: #2980b9;
+      background-color: #0055a4; /* Slightly darker on hover */
     }
 
     footer {
       text-align: center;
       padding: 10px;
-      background-color: #2c3e50;
+      background-color: #00264d; /* Matches header and table header color */
       color: white;
       margin-top: 20px;
     }
@@ -105,15 +103,6 @@
       }
       to {
         opacity: 1;
-      }
-    }
-
-    @keyframes popUp {
-      from {
-        transform: scale(0.9);
-      }
-      to {
-        transform: scale(1);
       }
     }
   </style>
@@ -183,8 +172,28 @@
 
     <section>
       <h2>Certificates</h2>
-      <a href="certificate1.pdf" class="btn" download>Download Certificate 1</a>
-      <a href="certificate2.pdf" class="btn" download>Download Certificate 2</a>
+      <table>
+        <thead>
+          <tr>
+            <th>Certificate Name</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HPLC, LCMS, GCMS Workshop Certificate</td>
+            <td><a href="certificate1.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>Catalase Breaking The Bad Workshop Certificate</td>
+            <td><a href="certificate2.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>Scientific Writing Course Certificate</td>
+            <td><a href="certificate3.pdf" class="btn" download>Download</a></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </div>
 
