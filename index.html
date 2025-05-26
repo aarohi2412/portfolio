@@ -1,699 +1,289 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarohi Gaikwad - Portfolio (Google Inspired)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        :root {
-            --google-blue: #1a73e8; /* Google's primary blue */ 
-            --google-red: #ea4335;
-            --google-yellow: #fbbc05;
-            --google-green: #34a853;
-            --text-primary: #202124; /* Google's primary text color */
-            --text-secondary: #5f6368; /* Google's secondary text color */
-            --surface-background: #fff;
-            --page-background: #f8f9fa; /* Light gray, common in Google apps */
-            --border-color: #dadce0;
-            --card-shadow: 0 1px 3px rgba(60,64,67,0.15), 0 1px 2px rgba(60,64,67,0.3);
-            --card-hover-shadow: 0 4px 8px rgba(60,64,67,0.15), 0 2px 6px rgba(60,64,67,0.3);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarohi Gaikwad | Biotechnology Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #add8e6;
+      color: #333;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    h1, h2, h3 {
+      text-align: center;
+      font-weight: bold;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: var(--page-background);
-            color: var(--text-primary);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    header {
+      background-color: #1c4966 ;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
+    header h1 {
+      font-size: 2.5rem;
+    }
 
-        /* --- Header / Navbar --- */
-        header {
-            background-color: var(--surface-background);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
+    header p {
+      font-size: 1.2rem;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
+    /* Section Styles */
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        nav .logo {
-            font-size: 1.8em;
-            font-weight: 500;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-        nav .logo .g-blue { color: var(--google-blue); }
-        nav .logo .g-red { color: var(--google-red); }
-        nav .logo .g-yellow { color: var(--google-yellow); }
-        nav .logo .g-green { color: var(--google-green); }
+    section:nth-child(odd) {
+      background-color:#1c4966 ;
+      color:white ;
+    }
 
+    section:nth-child(even) {
+      background-color: #1c4966;
+      color: white;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #8cd3ff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s;
+      color: #333;
+    }
 
-        nav ul li {
-            margin-left: 25px;
-        }
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-weight: 500;
-            padding-bottom: 5px;
-            transition: color 0.3s ease, border-bottom-color 0.3s ease;
-        }
+    table th {
+      background: #8cd3ff;
+      color: white;
+    }
 
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--google-blue);
-            border-bottom: 2px solid var(--google-blue);
-        }
-        
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 28px;
-            color: var(--text-secondary);
-        }
+    .btn {
+      display: inline-block;
+      background-color: #8cd3ff;
+      color: white;
+      padding: 6px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
+    .btn:hover {
+      background-color: #004080;
+    }
 
-        /* --- Sections --- */
-        section {
-            padding: 60px 0;
-        }
-        section:nth-child(even) { /* Alternate light background for sections */
-            /* background-color: #f1f3f4; */ /* Optional: slightly different shade */
-        }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #8cd3ff;
+      color: white;
+      margin-top: 20px;
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.2em;
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--google-blue);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
+    /* Animations */
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
-
-        /* --- Hero Section --- */
-        #hero {
-            background-color: var(--surface-background); /* White for hero often looks good */
-            text-align: center;
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        #hero h1 {
-            font-size: 3em;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-        }
-        #hero h1 .g-blue { color: var(--google-blue); }
-        #hero h1 .g-red { color: var(--google-red); }
-        #hero h1 .g-yellow { color: var(--google-yellow); }
-        #hero h1 .g-green { color: var(--google-green); }
-
-
-        #hero .subtitle {
-            font-size: 1.5em;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-        
-        #hero .profile-pic {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid var(--surface-background);
-            box-shadow: var(--card-shadow);
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: var(--text-secondary);
-            font-size: 28px; /* Material icon size */
-            margin: 0 12px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .social-links a .material-icons {
-            vertical-align: middle; /* Align icons better */
-        }
-
-        .social-links a:hover {
-            color: var(--google-blue);
-        }
-        .social-links .github-icon:hover { color: #333; }
-        .social-links .linkedin-icon:hover { color: #0077b5; }
-        .social-links .email-icon:hover { color: var(--google-red); }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--google-blue);
-            color: #fff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
-
-        .btn:hover {
-            background-color: #1669c9; /* Slightly darker blue */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-        }
-        .btn .material-icons {
-            vertical-align: middle;
-            margin-right: 5px;
-            font-size: 1.2em;
-        }
-
-
-        /* --- About Section --- */
-        #about .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        #about .about-text {
-            flex: 1;
-        }
-        #about .about-text p {
-            margin-bottom: 15px;
-            color: var(--text-secondary);
-            font-size: 1.1em;
-        }
-         #about .about-image-container { /* Optional if you want a framed image */
-            flex-shrink: 0;
-         }
-        #about .about-image {
-             width: 250px; /* Adjust as needed */
-             height: 250px;
-             object-fit: cover;
-             border-radius: 8px;
-             box-shadow: var(--card-shadow);
-        }
-
-
-        /* --- Skills Section --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-
-        .skill-item {
-            background-color: var(--surface-background);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .skill-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--card-hover-shadow);
-        }
-
-        .skill-item .material-icons {
-            font-size: 48px;
-            margin-bottom: 10px;
-            /* Assigning Google colors to icons for variety */
-        }
-        .skill-item:nth-child(4n+1) .material-icons { color: var(--google-blue); }
-        .skill-item:nth-child(4n+2) .material-icons { color: var(--google-red); }
-        .skill-item:nth-child(4n+3) .material-icons { color: var(--google-yellow); }
-        .skill-item:nth-child(4n) .material-icons { color: var(--google-green); }
-
-        .skill-item h3 {
-            font-size: 1.1em;
-            font-weight: 500;
-            margin-bottom: 5px;
-            color: var(--text-primary);
-        }
-
-        /* --- Projects Section --- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background-color: var(--surface-background);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            box-shadow: var(--card-hover-shadow);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .project-card .card-content {
-            padding: 20px;
-            flex-grow: 1; /* Makes content take available space */
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card h3 {
-            font-size: 1.4em;
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: 0.95em;
-            margin-bottom: 15px;
-            flex-grow: 1; /* Pushes links to bottom */
-        }
-        
-        .project-tags {
-            margin-bottom: 15px;
-        }
-        .project-tags .tag {
-            display: inline-block;
-            background-color: var(--page-background);
-            color: var(--text-secondary);
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-        .project-links a {
-            text-decoration: none;
-            color: var(--google-blue);
-            font-weight: 500;
-            margin-right: 15px;
-            transition: color 0.2s ease;
-        }
-        .project-links a .material-icons {
-            vertical-align: middle;
-            font-size: 1.2em; /* Adjusted for inline text */
-            margin-right: 3px;
-        }
-
-        .project-links a:hover {
-            color: #1669c9;
-        }
-
-        /* --- Contact Section --- */
-        #contact {
-            text-align: center;
-        }
-        #contact p {
-            font-size: 1.1em;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: var(--surface-background);
-            text-align: center;
-            padding: 25px 0;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9em;
-            margin-top: auto; /* Pushes footer to bottom */
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none; /* Hide nav links */
-                flex-direction: column;
-                width: 100%;
-                background-color: var(--surface-background);
-                position: absolute;
-                top: 60px; /* Adjust based on nav height */
-                left: 0;
-                padding: 10px 0;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            nav ul.active {
-                display: flex; /* Show when active */
-            }
-            nav ul li {
-                margin: 10px 20px;
-                text-align: center;
-            }
-            .menu-toggle {
-                display: block; /* Show hamburger */
-            }
-
-            #hero h1 {
-                font-size: 2.5em;
-            }
-            #hero .subtitle {
-                font-size: 1.2em;
-            }
-            
-            #about .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            #about .about-image {
-                margin-bottom: 20px;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            }
-            .projects-grid {
-                grid-template-columns: 1fr; /* Stack projects */
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav .logo {
-                font-size: 1.5em;
-            }
-            #hero h1 {
-                font-size: 2em;
-            }
-            #hero .subtitle {
-                font-size: 1em;
-            }
-            #hero .profile-pic {
-                width: 120px;
-                height: 120px;
-            }
-            .section-title {
-                font-size: 1.8em;
-            }
-             .social-links a {
-                font-size: 24px;
-                margin: 0 8px;
-            }
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-        }
-    </style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#hero" class="logo">
-                    A<span class="g-blue">a</span>r<span class="g-red">o</span>h<span class="g-yellow">i</span> <span class="g-green">S.</span>
-                </a>
-                <div class="menu-toggle">
-                    <span class="material-icons">menu</span>
-                </div>
-                <ul id="nav-links">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <h1>Aarohi Gaikwad</h1>
+    <p>Second-Year Biotechnology Student | MES Abasaheb Garware College, Pune</p>
+  </header>
 
-    <main>
-        <section id="hero">
-            <div class="container">
-                <!-- Replace with your actual image -->
-                <img src="https://via.placeholder.com/180" alt="Aarohi Singh" class="profile-pic">
-                <h1>
-                    H<span class="g-red">e</span>l<span class="g-yellow">l</span>o<span class="g-blue">,</span> I<span class="g-green">'</span>m <span class="g-blue">A</span>a<span class="g-red">r</span>o<span class="g-yellow">h</span>i <span class="g-green">S</span>i<span class="g-blue">n</span>g<span class="g-red">h</span>
-                </h1>
-                <p class="subtitle">Full Stack Developer | Tech Enthusiast | Lifelong Learner</p>
-                <a href="#contact" class="btn">
-                    <span class="material-icons">email</span> Get In Touch
-                </a>
-                <div class="social-links">
-                    <a href="https://github.com/aarohi2412" target="_blank" class="github-icon" title="GitHub">
-                        <svg height="28" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="28" fill="currentColor">
-                            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.19.01-.82.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21-.15.46-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/aarohi-singh-b62753203/" target="_blank" class="linkedin-icon" title="LinkedIn">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:youremail@example.com" class="email-icon" title="Email">
-                        <span class="material-icons">email</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <!-- About Section -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am an enthusiastic and dedicated biotechnology student with substantial experience in molecular biology techniques and microbiology research. My aspiration is to contribute to cutting-edge research in biology while fostering strong scientific communication through impactful projects.
+      </p>
+    </section>
 
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                     <div class="about-image-container">
-                        <!-- Replace with your actual image or remove if not desired -->
-                        <img src="https://via.placeholder.com/250" alt="Aarohi Singh at work" class="about-image">
-                    </div>
-                    <div class="about-text">
-                        <p>Hello! I'm Aarohi, a passionate and driven Full Stack Developer with a knack for creating elegant and efficient solutions. My journey in tech began with a fascination for how software can solve real-world problems and enhance human experiences.</p>
-                        <p>I have experience in building web applications from scratch, working on both front-end and back-end technologies. I enjoy the challenge of learning new tools and frameworks, and I'm always eager to collaborate on exciting projects.</p>
-                        <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or [Your Hobby Here, e.g., reading tech blogs, hiking, playing a musical instrument].</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Education Section -->
+    <section>
+      <h2>Education</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2024-2025</td>
+            <td>Second-Year Biotechnology, MES Abasaheb Garware College, Pune (CGPA: 8.85)</td>
+          </tr>
+          <tr>
+            <td>2023-2024</td>
+            <td>First-Year CGPA: 8.69</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <span class="material-icons">code</span>
-                        <h3>HTML5 & CSS3</h3>
-                    </div>
-                    <div class="skill-item">
-                        <span class="material-icons">javascript</span>
-                        <h3>JavaScript</h3>
-                    </div>
-                    <div class="skill-item">
-                        <span class="material-icons">data_object</span>
-                        <h3>React</h3>
-                    </div>
-                    <div class="skill-item">
-                        <span class="material-icons">storage</span>
-                        <h3>Node.js</h3>
-                    </div>
-                    <div class="skill-item">
-                        <span class="material-icons">dns</span>
-                        <h3>Express.js</h3>
-                    </div>
-                    <div class="skill-item">
-                        <span class="material-icons">inventory_2</span>
-                        <h3>MongoDB</h3>
-                    </div>
-                    <div class="skill-item">
-                        <span class="material-icons">hub</span>
-                        <h3>Git & GitHub</h3>
-                    </div>
-                    <div class="skill-item">
-                        <span class="material-icons">api</span>
-                        <h3>REST APIs</h3>
-                    </div>
-                    <!-- Add more skills as needed -->
-                </div>
-            </div>
-        </section>
+    <!-- Projects and Workshops Section -->
+    <section>
+      <h2>Projects and Workshops</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Project/Workshop</th>
+            <th>Details</th>
+            <th>Certificate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HPLC Training</td>
+            <td>Advanced training in HPLC instrumentation</td>
+            <td><a href="HPLC TRAINING.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>CRISPR-Cas9 Workshop</td>
+            <td>Workshop on CRISPR-Cas9 technology at IISER Pune</td>
+            <td><a href="IISER PUNE CRISPR-Cas9 Workshop.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>Catalase: Breaking the Bad</td>
+            <td>Exploration of enzyme catalysis</td>
+            <td><a href="IISER PUNE Catalase Breaking The Bad.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>Microbial Genomics Course</td>
+            <td>Intensive study on microbial genomics at Biogrademy</td>
+            <td><a href="Biogrademy Microbial Genomics.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>Science Through Theatre Workshop</td>
+            <td>Participated at TIFR Hyderabad</td>
+            <td><a href="India Science Fest Science Through Theatre Workshop.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>Scientific Writing Course</td>
+            <td>Developed professional writing skills at Abasaheb Garware College</td>
+            <td><a href="Scientific Writing Course Abasaheb Garware College.pdf" class="btn" download>Download</a></td>
+          </tr>
+          <tr>
+            <td>KISAAN Convention Project</td>
+            <td>Worked on two research projects</td>
+            <td><a href="KISAAN Project Certificate.pdf" class="btn" download>Download</a></td> 
+          </tr>
+          <tr>
+             <td>Survey</td>
+            <td>Correlation of plants with our mental state</td>
+            <td><a href="Survey Report .pdf" class="btn" download>Download</a></td> 
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/400x200/1a73e8/ffffff?Text=Project+Image+1" alt="Project 1 Screenshot">
-                        <div class="card-content">
-                            <h3>Awesome Project Title 1</h3>
-                             <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">MongoDB</span>
-                            </div>
-                            <p>A brief description of your project. Highlight key features and technologies used. Make it concise and impactful.</p>
-                            <div class="project-links">
-                                <a href="#" target="_blank"><span class="material-icons">visibility</span> Live Demo</a>
-                                <a href="#" target="_blank"><span class="material-icons">code</span> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/400x200/ea4335/ffffff?Text=Project+Image+2" alt="Project 2 Screenshot">
-                        <div class="card-content">
-                            <h3>Innovative Web App</h3>
-                             <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Firebase</span>
-                                <span class="tag">HTML/CSS</span>
-                            </div>
-                            <p>Another cool project. Explain the problem it solves or its main purpose. Keep it engaging for potential recruiters.</p>
-                           <div class="project-links">
-                                <a href="#" target="_blank"><span class="material-icons">visibility</span> Live Demo</a>
-                                <a href="#" target="_blank"><span class="material-icons">code</span> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 3 (Example without tags) -->
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/400x200/fbbc05/333333?Text=Project+Image+3" alt="Project 3 Screenshot">
-                        <div class="card-content">
-                            <h3>Portfolio Website</h3>
-                            <p>The very portfolio you are looking at, built with a Google-inspired Material Design. Focuses on clarity and responsiveness.</p>
-                           <div class="project-links">
-                                <a href="https://github.com/aarohi2412/portfolio" target="_blank"><span class="material-icons">code</span> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                     <!-- Add more project cards here -->
-                </div>
-            </div>
-        </section>
+    <!-- Internships Section -->
+    <section>
+      <h2>Internships</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Internship</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Agharkar Research Institute</td>
+            <td>
+              Comprehensive training in PCR, HPLC, GCMS, and Sanger sequencing (1 month).
+              <a href="Agharkar On Job Training.pdf" class="btn" download>Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Sheetal Laboratory</td>
+            <td>
+              Conducted water testing and performed pH analysis and dilutions (1 month).
+              <a href="Sheetal Laboratory Internship.pdf" class="btn" download>Download</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing. Feel free to reach out!</p>
-                <a href="mailto:aarohi.singh2412@gmail.com" class="btn">
-                    <span class="material-icons">send</span> Send me an Email
-                </a>
-                <div class="social-links" style="margin-top: 40px;">
-                     <a href="https://github.com/aarohi2412" target="_blank" class="github-icon" title="GitHub">
-                        <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" fill="currentColor">
-                            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.19.01-.82.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21-.15.46-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/aarohi-singh-b62753203/" target="_blank" class="linkedin-icon" title="LinkedIn">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Achievements Section -->
+    <section>
+      <h2>Achievements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Achievement</th>
+            <th>Details</th>
+            <th>Certificate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1st Prize in Science-Based Essay</td>
+            <td>Awarded by Savitribai Phule Pune University</td>
+            <td><a href="1st Prize for Science Based Essay.pdf" class="btn" download>Download</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Aarohi Singh. Inspired by Google Design.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for nav links
-        document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // For mobile menu: close menu after click
-                const navLinks = document.getElementById('nav-links');
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-
-        // Highlight active nav link on scroll (simple version)
-        // More robust solutions might use Intersection Observer API
-        const sections = document.querySelectorAll('section');
-        const navLi = document.querySelectorAll('nav ul li a.nav-link');
-        window.addEventListener('scroll', ()=> {
-            let current = '';
-            sections.forEach( section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3) ){
-                    current = section.getAttribute('id');
-                }
-            })
-
-            navLi.forEach( a => {
-                a.classList.remove('active');
-                if(a.getAttribute('href').substring(1) === current){
-                    a.classList.add('active');
-                }
-            })
-        });
-
-
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+    <!-- CV Download Section -->
+    <section>
+      <h2>Download My CV</h2>
+      <a href="CV 2025.pdf" class="btn" download>Download CV</a>
+    </section>
+  </div>
+ <!-- Resume Download Section -->
+    <section>
+      <h2>Download My Resume</h2>
+      <a href="Resume 2025.pdf" class="btn" download>Download Resume</a>
+    </section>
+  </div>
+ 
+  <footer>
+    <p>© 2025 Aarohi Gaikwad | Designed with care</p>
+  </footer>
+</body>
+</html>
