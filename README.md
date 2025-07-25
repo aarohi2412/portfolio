@@ -3,7 +3,7 @@
 **Contact:** aarohiyg24@gmail.com | +91 8010241418  
 
 ## Overview  
-This repository contains the CV of Aarohi Gaikwad, a dedicated second-year Biotechnology student from MES Abasaheb Garware College, Pune. Aarohi has developed hands-on expertise in molecular and microbiological techniques through internships, workshops, and research projects. She is passionate about scientific research and communication, with a strong academic foundation and practical experience in the field of biotechnology.
+This repository contains the CV of Aarohi Gaikwad, a dedicated third-year Biotechnology student from MES Abasaheb Garware College, Pune. Aarohi has developed hands-on expertise in molecular and microbiological techniques through internships, workshops, and research projects. She is passionate about scientific research and communication, with a strong academic foundation and practical experience in the field of biotechnology.
 
 ---
 
@@ -11,8 +11,8 @@ This repository contains the CV of Aarohi Gaikwad, a dedicated second-year Biote
 
 ### **Education**  
 - **First-Year CGPA:** 8.69  
-- **Current CGPA (SEM3):** 8.85  
-- **Current SGPA (SEM3):** 9.18  
+- **Second Year CGPA:** 8.98  
+- **Current SGPA (SEM4):** 9.36 
 
 ### **Skills**  
 - **Molecular Techniques:** PCR, HPLC, GCMS, Sanger sequencing.  
